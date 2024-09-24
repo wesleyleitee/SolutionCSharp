@@ -10,7 +10,7 @@ namespace Heritage
     {
         public override double GetBonus()
         {
-            return Wage + (Wage * 0.1);
+            return Wage + base.GetBonus();
         }
     }
 }

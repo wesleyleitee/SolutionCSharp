@@ -16,5 +16,15 @@ roberta.Wage = 5000;
 
 Employee robertaTeste = roberta;
 
-Console.WriteLine("Referral bonus director: " + roberta);
-Console.WriteLine("Referral bonus employee: " + robertaTeste);
+Console.WriteLine("Referral bonus director: " + roberta.GetBonus());
+Console.WriteLine("Referral bonus employee: " + robertaTeste.GetBonus());
+
+manager.Register(roberta);
+
+Console.Write(carlos.Name + ": ");
+Console.WriteLine(carlos.GetBonus());
+
+Console.Write(roberta.Name + ": ");
+Console.WriteLine(roberta.GetBonus());
+
+Console.WriteLine("Total of bonus: " + manager.GetTotalBonus());
