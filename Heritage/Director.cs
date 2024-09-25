@@ -8,6 +8,7 @@ namespace Heritage
 {
     public class Director : Employee
     {
+        public string Region { get; set; }
         public override double GetBonus()
         {
             return Wage + base.GetBonus();

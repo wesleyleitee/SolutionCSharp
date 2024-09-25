@@ -14,11 +14,6 @@ roberta.Name = "Roberta";
 roberta.CPF = "111.222.333-44";
 roberta.Wage = 5000;
 
-Employee robertaTeste = roberta;
-
-Console.WriteLine("Referral bonus director: " + roberta.GetBonus());
-Console.WriteLine("Referral bonus employee: " + robertaTeste.GetBonus());
-
 manager.Register(roberta);
 
 Console.Write(carlos.Name + ": ");
@@ -28,3 +23,11 @@ Console.Write(roberta.Name + ": ");
 Console.WriteLine(roberta.GetBonus());
 
 Console.WriteLine("Total of bonus: " + manager.GetTotalBonus());
+
+Employee employeeDirector = roberta;
+Console.WriteLine("Reference from a director to an employee, info employeeDirector: \n" +
+    employeeDirector.Name + "\nWage: " + employeeDirector.Wage);
+
+//I can't get the region property from the employeeDirector variable, as it is denoted as Employee
+
+Console.ReadKey();
